@@ -1,0 +1,17 @@
+# WordPress's dynamic endpoints, which the pages still link to (in <head>, and
+# the comment form's feed links) but a static archive can't serve: feeds, the
+# REST API, oEmbed and XML-RPC. Archived October 2026 from Krystal.
+# scripts/check-links.py reports these as a count, and fails on anything else.
+/author/edent/feed/
+/category/uncategorized/feed/
+/comments/feed/
+/feed/
+/wp-json/
+/wp-json/oembed/1.0/embed
+/wp-json/wp/v2/categories/1
+/wp-json/wp/v2/pages/19
+/wp-json/wp/v2/pages/62
+/wp-json/wp/v2/pages/8
+/wp-json/wp/v2/posts/1
+/wp-json/wp/v2/users/1
+/xmlrpc.php
