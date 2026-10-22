@@ -13,6 +13,6 @@ its Cloudflare tunnel. `nginx.conf` keeps WordPress's URL rules: `/about/` is
 comment form went with WordPress (`scripts/known-broken-links.txt`).
 
 A push to `main` runs `.github/workflows/publish.yml`: CI, then the image
-`ghcr.io/cbetta/thirteen.barcamplondon.org`, which it pins in jiji's
+`ghcr.io/betta-apps/thirteen.barcamplondon.org`, which it pins in jiji's
 `docker-compose.yml` to deploy. `scripts/check.sh` checks every local link
 and image resolves; `scripts/smoke.sh` builds the image and boots it.

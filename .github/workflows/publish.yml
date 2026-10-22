@@ -1,7 +1,7 @@
 name: Publish to jiji
 
 # Push to main -> CI (ci.yml) -> build the image and push it to
-# ghcr.io/cbetta/thirteen.barcamplondon.org -> jiji's pin timer pins it by
+# ghcr.io/betta-apps/thirteen.barcamplondon.org -> jiji's pin timer pins it by
 # tag and digest within about a minute, which deploys it. jiji holds no copy
 # of the site, only which image it runs, so main here is always what
 # thirteen.barcamplondon.org serves.
@@ -92,8 +92,8 @@ jobs:
           context: .
           outputs: type=registry,rewrite-timestamp=true
           tags: |
-            ghcr.io/cbetta/thirteen.barcamplondon.org:${{ steps.meta.outputs.tag }}
-            ghcr.io/cbetta/thirteen.barcamplondon.org:main
+            ghcr.io/betta-apps/thirteen.barcamplondon.org:${{ steps.meta.outputs.tag }}
+            ghcr.io/betta-apps/thirteen.barcamplondon.org:main
           labels: |
             org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
             io.betta.jiji.tag=${{ steps.meta.outputs.tag }}
