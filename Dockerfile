@@ -1,7 +1,7 @@
 # The BarCamp London 13 archive is plain files (site/), served by nginx with the URL
 # rules WordPress had (nginx.conf). It runs on jiji, behind Caddy and the
 # Cloudflare tunnel, at thirteen.barcamplondon.org.
-FROM mirror.gcr.io/nginxinc/nginx-unprivileged:1.30-alpine@sha256:782bb89768cc87b7f95c18b95baa1af250e5d451f26794f59363540161147c01
+FROM mirror.gcr.io/nginxinc/nginx-unprivileged:1.30-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --link site /srv/site
