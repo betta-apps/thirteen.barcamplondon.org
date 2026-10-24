@@ -43,6 +43,8 @@ jobs:
 
   publish:
     needs: ci
+    # A manual run can pick any branch; only main ever becomes :main.
+    if: github.ref == 'refs/heads/main'
     runs-on: [self-hosted, jiji-ci]
     permissions:
       contents: read
